@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
         private float speed;
         @Override
         protected Object doInBackground(Object[] objects) {
-            uqi.getData(Geolocation.asUpdates(500, Geolocation.LEVEL_CITY), Purpose.TEST("test"))
+            uqi.getData(Geolocation.asUpdates(500, Geolocation.LEVEL_EXACT), Purpose.UTILITY("monitoring speed"))
             .forEach("speed", new Callback<Float>() {
                 @Override
                 protected void onInput(Float input) {
